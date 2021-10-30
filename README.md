@@ -1,7 +1,35 @@
 # Vue 3 + Vite
+本项目采用Vue3+Vite开发
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+```
+npm init vite@latest
+```
 
-## Recommended IDE Setup
+```
+// 引入 vue-router@4
+npm install vue-router@4
+```
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+```
+// 引入 elementPlus
+npm install element-plus --save
+```
+
+```
+// 引入vuex
+npm install vuex@next --save
+```
+
+引入sass
+
+```
+# .scss and .sass
+npm install -D sass
+```
+
+引入normalize.css初始化浏览器样式
+
+```
+npm install normalize.css
+```
+
