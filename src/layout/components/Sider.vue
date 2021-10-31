@@ -19,8 +19,8 @@
 				<router-link to="/charts"
 					><el-menu-item index="1-1">图表</el-menu-item></router-link
 				>
-				<router-link to="/"
-					><el-menu-item index="1-2">item two</el-menu-item></router-link
+				<router-link to="/mall"
+					><el-menu-item index="1-2">商城</el-menu-item></router-link
 				>
 				<router-link to="/"
 					><el-menu-item index="1-4-1">item one</el-menu-item></router-link

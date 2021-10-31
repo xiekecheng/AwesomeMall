@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>这里是Header标题</h1>
+		<h1>商品页</h1>
 	</div>
 </template>
 
