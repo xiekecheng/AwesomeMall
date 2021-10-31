@@ -1,3 +1,6 @@
+/**
+ * 封装localStorage
+ */
 const namespace = 'mall'
 
 export function getItem(key,def){
@@ -13,7 +16,5 @@ export function setItem(key,value){
 	if(!storage){
 		storage = {}
 	}
-	console.log('storage',storage);
 	storage[key] = value
-	console.log('storage',storage);
 }

@@ -6,6 +6,8 @@ const Charts = () => import('@/views/Graph/Charts.vue')
 const Mall = () => import('@/views/Mall/Home.vue')
 // import Charts from '../views/graph/Charts';
 // const Charts = () => import('../views/graph/Charts.vue')
+const Excel = () => import('@/views/Excel/index.vue')
+// 配置路由 
 const routes = [
 	{ path: '/', redirect:'/charts' },
 	{
@@ -15,7 +17,11 @@ const routes = [
 	{
 		path: '/mall',
 		component: Mall
-	}
+	},
+	{
+		path:'/excel',
+		component:Excel
+	},
 ]
 
 const router = createRouter({
