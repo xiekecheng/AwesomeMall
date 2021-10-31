@@ -8,6 +8,7 @@
     "start": "npm run dev"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "element-plus": "^1.1.0-beta.24",
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
