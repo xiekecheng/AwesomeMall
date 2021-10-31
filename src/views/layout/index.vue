@@ -1,7 +1,7 @@
 <template>
 	<div style="height:100%">
 		<el-container>
-			<el-aside width="200px"><Sider/></el-aside>
+			<el-aside width="none"><Sider/></el-aside>
 			<el-container>
 				<el-header><Header/></el-header>
 				<el-main><router-view></router-view></el-main>
