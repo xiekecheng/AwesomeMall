@@ -16,10 +16,11 @@
 				Drop file here or
 				<em>click to upload</em>
 			</div>
-			<template #tip>
+			<!-- <template #tip>
 				<div class="el-upload__tip">jpg/png files with a size less than 500kb</div>
-			</template>
+			</template> -->
 		</el-upload>
+		<el-button type="primary" @click="exportExcel">导出Excel</el-button>
 
 		<!-- 导入的表格 -->
 		<el-table :data="tableList" style="width: 100%">
@@ -89,6 +90,9 @@ export default {
 
 
 		},
+		exportExcel(){
+			
+		}
 		// handleUpload(event, file, fileList){
 		// 	console.log('event, file, fileList',event, file, fileList);
 		// }
