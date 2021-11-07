@@ -1,8 +1,8 @@
-export default  function(file){
-	return new Promise(resolve=>{
+export default function(file) {
+	return new Promise(resolve => {
 		let reader = new FileReader()
 		// reader.readAsBinaryString(file)
-		reader.onload = ev =>{
+		reader.onload = ev => {
 			resolve(ev.target.result)
 		}
 	})
