@@ -6,8 +6,7 @@ import Layout from '@/layout/index.vue';
 </script>
 
 <template>
-  <Layout/>
-
+  <Layout />
 </template>
 
 <style>
@@ -19,8 +18,9 @@ import Layout from '@/layout/index.vue';
   color: #2c3e50;
   margin-top: 60px; */
 }
-html,body,#app{
+html,
+body,
+#app {
   height: 100%;
 }
-
 </style>
