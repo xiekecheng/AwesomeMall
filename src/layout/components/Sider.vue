@@ -1,8 +1,8 @@
 <template>
   <div>
     <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">
-      <el-radio-button v-if="isCollapse" :label="false">展开</el-radio-button>
-      <el-radio-button v-else :label="true">关闭</el-radio-button>
+      <el-radio-button v-show="isCollapse" :label="false">展开</el-radio-button>
+      <el-radio-button v-show='!isCollapse' :label="true">关闭</el-radio-button>
     </el-radio-group>
     <el-menu
       default-active="2"
@@ -16,26 +16,25 @@
           <i class="el-icon-location"></i>
           <span>图表页面</span>
         </template>
-        <!-- <router-link to="/charts"></router-link>
-					<el-menu-item index="1-1">图表</el-menu-item>
-				</router-link> -->
         <router-link to="/charts">
           <el-menu-item index="1-1">图表</el-menu-item>
         </router-link>
         <router-link to="/mall">
           <el-menu-item index="1-2">商城</el-menu-item>
         </router-link>
-        <router-link to="/">
-          <el-menu-item index="1-4-1">item one</el-menu-item>
+        <router-link to="/dialog">
+          <el-menu-item index="1-3">Dialog弹窗测试</el-menu-item>
         </router-link>
         <router-link to="/">
-          <el-menu-item index="1-3">item three</el-menu-item>
+          <el-menu-item index="1-4">item three</el-menu-item>
         </router-link>
       </el-sub-menu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <template #title>用户信息</template>
-      </el-menu-item>
+      <router-link to="/user">
+        <el-menu-item index="2">
+          <i class="el-icon-menu"></i>
+          <template #title>用户信息</template>
+        </el-menu-item>
+      </router-link>
       <el-sub-menu index="3">
         <template #title>
           <i class="el-icon-location"></i>
@@ -78,4 +77,8 @@ export default defineComponent({
 });
 </script>
 
-<!-- <style lang="scss" scoped></style> -->
+ <style lang="scss" scoped>
+*{
+  text-decoration: none;
+}
+ </style> 
