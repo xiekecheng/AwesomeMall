@@ -20,6 +20,11 @@ npm install element-plus --save
 npm install vuex@next --save
 ```
 
+```
+// 引入Echarts
+npm install echarts --save
+```
+
 引入sass
 
 ```
