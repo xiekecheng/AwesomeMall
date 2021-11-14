@@ -21,6 +21,7 @@
 			</template> -->
     </el-upload>
     <el-button type="primary" @click="exportExcel">导出Excel</el-button>
+    <el-button type="danger" @click="dialogVisible = true">打开对话框</el-button>
 
     <!-- 导入的表格 -->
     <el-table :data="tableList" style="width: 100%">
@@ -30,11 +31,23 @@
       <el-table-column prop="Readings" label="Readings" />
       <el-table-column prop="Date" label="Date" />
     </el-table>
+
+    <my-dialog :showDialog="dialogVisible" @show-dialog="changeShowDialog" />
+    <!-- <el-dialog v-model="dialogVisible" title="Tips" width="30%" :before-close="handleClose">
+      <span>This is a message</span>
+      <template #footer>
+        <span class="dialog-footer">
+          <el-button @click="dialogVisible = false">Cancel</el-button>
+          <el-button type="primary" @click="dialogVisible = false">Confirm</el-button>
+        </span>
+      </template>
+    </el-dialog> -->
   </div>
 </template>
 
 <script>
 import { UploadFilled } from '@element-plus/icons';
+// import MyDialog from './components/MyDialog.vue';
 // import fileReader from '@/utils/fileReader';
 import xlsx from 'xlsx';
 export default {
@@ -45,12 +58,14 @@ export default {
   // },
   components: {
     UploadFilled,
+    // MyDialog,
   },
   setup() {
     return {};
   },
   data() {
     return {
+      dialogVisible: false,
       tableData: [
         {
           date: '2016-05-03',
@@ -116,6 +131,12 @@ export default {
       // this.tableData = json
     },
     exportExcel() {},
+    HandleShowDialog() {
+      this.showDialog = true;
+    },
+    changeShowDialog(val) {
+      this.dialogVisible = val;
+    },
     // handleUpload(event, file, fileList){
     // 	console.log('event, file, fileList',event, file, fileList);
     // }
