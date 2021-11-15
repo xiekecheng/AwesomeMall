@@ -10,7 +10,7 @@
           <el-input v-model="formLogin.password"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="onSubmit('formLogin')">登录</el-button>
+          <el-button type="primary" @click="onSubmit('formLogin')">登录1111</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -19,21 +19,23 @@
 
 <script>
 import { ElMessage } from 'element-plus';
+import { ref } from 'vue';
 export default {
   setup() {
     const open1 = () => {
       ElMessage.error('账号或密码不能为空');
     };
+    const formLogin = ref({
+      username: '',
+      password: '',
+    });
     return {
       open1,
+      formLogin,
     };
   },
   data() {
     return {
-      formLogin: {
-        username: '',
-        password: '',
-      },
       rules: {
         username: [
           {
